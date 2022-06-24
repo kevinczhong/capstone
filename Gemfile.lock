@@ -76,6 +76,8 @@ GEM
       reline (>= 0.2.7)
     digest (3.1.0)
     erubi (1.10.0)
+    faker (2.21.0)
+      i18n (>= 1.8.11, < 2)
     globalid (1.0.0)
       activesupport (>= 5.0)
     i18n (1.10.0)
@@ -83,6 +85,7 @@ GEM
     io-console (0.5.11)
     irb (1.4.1)
       reline (>= 0.3.0)
+    jb (0.8.0)
     loofah (2.18.0)
       crass (~> 1.0.2)
       nokogiri (>= 1.5.9)
@@ -162,6 +165,8 @@ PLATFORMS
 DEPENDENCIES
   bootsnap
   debug
+  faker
+  jb
   pg (~> 1.1)
   puma (~> 5.0)
   rails (~> 7.0.3)
