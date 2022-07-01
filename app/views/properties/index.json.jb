@@ -1,0 +1,8 @@
+# @properties.map do |property|
+#   {
+#     id: property.id,
+#     url: property_url(property, format: :json)
+#   }
+# end
+
+render partial: "properties/properties", collection: @properties, as: :property

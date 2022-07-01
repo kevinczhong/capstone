@@ -1,0 +1,18 @@
+{
+  id: property.id,
+  user_id: property.user_id,
+  floor_space: property.floor_space,
+  bedrooms: property.bedrooms,
+  bathrooms: property.bathrooms,
+  balconies: property.balconies,
+  description: property.description,
+  address: property.address,
+  floors: property.floors,
+  year_built: property.year_built,
+  is_rent: property.is_rent,
+  listed_price: property.listed_price,
+  rent: property.rent,
+  lease_type: property.lease_type,
+  pet_friendly: property.pet_friendly,
+  list_date: property.list_date,
+}

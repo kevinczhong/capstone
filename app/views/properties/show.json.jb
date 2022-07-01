@@ -1,0 +1,7 @@
+# {
+#   id: @property.id,
+#   created_at: @property.created_at,
+#   updated_at: @property.updated_at
+# }
+
+render "properties/properties", property: @property
