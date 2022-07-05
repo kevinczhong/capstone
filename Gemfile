@@ -17,7 +17,7 @@ gem "puma", "~> 5.0"
 
 gem "jb"
 gem "faker"
-gem 'bcrypt', '~> 3.1.18'
+gem 'bcrypt'
 gem 'jwt'
 
 # Use Redis adapter to run Action Cable in production
