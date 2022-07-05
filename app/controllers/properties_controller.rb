@@ -35,7 +35,7 @@ class PropertiesController < ApplicationController
   end
 
   def update
-    property = Property.new(
+    property = Property.update(
       floor_space: params[:floor_space],
       bedrooms: params[:bedrooms],
       bathrooms: params[:bathrooms],
@@ -61,6 +61,6 @@ class PropertiesController < ApplicationController
   def destroy
     property = Property.find_by(id: params[:id])
     property.destroy
-    render json: { message: "This listing has been removed from inventory" }
+    render json: { message: "This listing has been removed." }
   end
 end
