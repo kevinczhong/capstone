@@ -18,3 +18,11 @@ Content-Type: application/json
   "email": "admin@test.com",
   "password": "password"
 }
+
+### Property Update
+PATCH http://localhost:3000/properties/13.json
+Content-Type: application/json
+
+{
+  "listed_price": 2000000
+}
