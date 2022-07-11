@@ -31,3 +31,13 @@ Content-Type: application/json
 ### Tour Test
 
 GET http://localhost:3000/tours.json 
+
+### Image Test
+
+POST http://localhost:3000/images.json
+Content-Type: application/json
+
+{
+  "property_id": 18,
+  "image_url": "https://upload.wikimedia.org/wikipedia/commons/2/22/HK_Bank_of_China_Tower_View.jpg"
+}

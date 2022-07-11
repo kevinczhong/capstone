@@ -10,16 +10,15 @@ class ImagesController < ApplicationController
   end
 
   def create
-    image = Image.new(
+    image = Image.create!(
       property_id: params[:property_id],
       image_url: params[:image_url],
     )
-    image.save
     render json: image.as_json
   end
 
   def update
-    image = Image.new(
+    image = Image.update(
       property_id: params[:property_id],
       image_url: params[:image_url],
     )
