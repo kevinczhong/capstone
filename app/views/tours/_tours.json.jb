@@ -1,0 +1,10 @@
+{
+  id: tour.id,
+  buyer_id: tour.buyer_id,
+  buyer: tour.buyer,
+  seller_id: tour.seller_id,
+  seller: tour.seller,
+  time: tour.time,
+  property_id: tour.property_id,
+  property: tour.property,
+}

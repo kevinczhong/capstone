@@ -1,19 +1,19 @@
 class ToursController < ApplicationController
   def index
-    tours = Tour.all
-    render json: tours.as_json
+    @tours = Tour.all
+    render template: "tours/index"
   end
 
   def show
-    tour = Tour.find_by(id: params[:id])
-    render json: tour.as_json
+    @tour = Tour.find_by(id: params[:id])
+    render template: "tours/show"
   end
 
   def create
     tour = Tour.new(
-      buyer_id: params[:buyer_id],
+      buyer_id: current_user.id,
       seller_id: params[:seller_id],
-      date: params[:date],
+      time: params[:time],
       property_id: params[:property_id],
     )
     tour.save

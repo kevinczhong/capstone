@@ -26,3 +26,8 @@ Content-Type: application/json
 {
   "listed_price": 2000000
 }
+
+
+### Tour Test
+
+GET http://localhost:3000/tours.json 

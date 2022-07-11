@@ -15,4 +15,5 @@
   lease_type: property.lease_type,
   pet_friendly: property.pet_friendly,
   list_date: property.list_date,
+  images: property.images,
 }

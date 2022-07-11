@@ -1,0 +1,7 @@
+# {
+#   id: @tour.id,
+#   created_at: @tour.created_at,
+#   updated_at: @tour.updated_at
+# }
+
+render "tours/tours", tour: @tour

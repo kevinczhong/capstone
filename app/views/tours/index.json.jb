@@ -1,0 +1,8 @@
+# @tours.map do |tour|
+#   {
+#     id: tour.id,
+#     url: tour_url(tour, format: :json)
+#   }
+# end
+
+render partial: "tours/tours", collection: @tours, as: :tour
