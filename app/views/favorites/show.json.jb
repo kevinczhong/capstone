@@ -1,0 +1,6 @@
+# {
+#   id: @favorite.id,
+#   created_at: @favorite.created_at,
+#   updated_at: @favorite.updated_at
+# }
+render "favorites/favorites", favorite: @favorite

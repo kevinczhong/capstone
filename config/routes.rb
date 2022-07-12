@@ -23,7 +23,7 @@ Rails.application.routes.draw do
   # Favorite Routes
   get "/favorites", controller: "favorites", action: "index"
   post "/favorites", controller: "favorites", action: "create"
-  delete "/favorites", controller: "favorites", action: "destroy"
+  delete "/favorites/:id", controller: "favorites", action: "destroy"
 
   # Image Routes
   get "/images", controller: "images", action: "index"

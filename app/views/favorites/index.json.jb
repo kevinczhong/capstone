@@ -1,0 +1,8 @@
+# @favorites.map do |favorite|
+#   {
+#     id: favorite.id,
+#     url: favorite_url(favorite, format: :json)
+#   }
+# end
+
+render partial: "favorites/favorites", collection: @favorites, as: :favorite
