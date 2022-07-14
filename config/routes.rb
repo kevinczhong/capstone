@@ -10,6 +10,8 @@ Rails.application.routes.draw do
   # Property Routes
   get "/properties", controller: "properties", action: "index"
   get "/properties/:id", controller: "properties", action: "show"
+  get "/properties/:id/data", controller: "properties", action: "z_basic"
+  get "/properties/:id/assessment", controller: "properties", action: "z_assessment"
   post "/properties", controller: "properties", action: "create"
   patch "/properties/:id", controller: "properties", action: "update"
   delete "/properties/:id", controller: "properties", action: "destroy"

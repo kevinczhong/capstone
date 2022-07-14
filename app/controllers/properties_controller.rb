@@ -9,6 +9,40 @@ class PropertiesController < ApplicationController
     render template: "properties/show"
   end
 
+  def z_basic
+    property = Property.find_by(id: params[:id])
+    processed_address = ""
+    index = 0
+    raw = property.address
+    while index < raw.length
+      if raw[index] == " "
+        processed_address += "%20"
+      else
+        processed_address += raw[index]
+      end
+      index += 1
+    end
+    data = HTTP.get("https://api.bridgedataoutput.com/api/v2/pub/parcels?access_token=YOURAPIKEYGOESHERE&address.full=#{processed_address}")
+    render json: data.parse(:json)
+  end
+
+  def z_assessment
+    property = Property.find_by(id: params[:id])
+    processed_address = ""
+    index = 0
+    raw = property.address
+    while index < raw.length
+      if raw[index] == " "
+        processed_address += "%20"
+      else
+        processed_address += raw[index]
+      end
+      index += 1
+    end
+    assessment = HTTP.get("https://api.bridgedataoutput.com/api/v2/zestimates_v2/zestimates?access_token=YOURAPIKEYGOESHERE&address==#{processed_address}")
+    render json: assessment.parse(:json)
+  end
+
   def create
     property = Property.new(
       user_id: current_user.id,
