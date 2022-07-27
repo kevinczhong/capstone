@@ -22,7 +22,7 @@ class PropertiesController < ApplicationController
       end
       index += 1
     end
-    data = HTTP.get("https://api.bridgedataoutput.com/api/v2/pub/parcels?access_token=YOURAPIKEYGOESHERE&address.full=#{processed_address}")
+    data = HTTP.get("https://api.bridgedataoutput.com/api/v2/pub/parcels?access_token=#{Rails.application.credentials.zillow_api[:api_key]}&address.full=#{processed_address}")
     render json: data.parse(:json)
   end
 
@@ -39,7 +39,7 @@ class PropertiesController < ApplicationController
       end
       index += 1
     end
-    assessment = HTTP.get("https://api.bridgedataoutput.com/api/v2/zestimates_v2/zestimates?access_token=YOURAPIKEYGOESHERE&address==#{processed_address}")
+    assessment = HTTP.get("https://api.bridgedataoutput.com/api/v2/zestimates_v2/zestimates?access_token=#{Rails.application.credentials.zillow_api[:api_key]}&address==#{processed_address}")
     render json: assessment.parse(:json)
   end
 
